@@ -1,0 +1,113 @@
+{
+  "$schema": "./feedback.schema.json",
+  "items": [
+    {
+      "quote": {
+        "i18nKey": "items.attentec-1.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.attentec-1.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.attentec-1.company"
+          },
+          "url": "https://www.attentec.se/"
+        }
+      ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.alvin.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.alvin.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.alvin.name"
+          },
+          "url": "https://stockhaus.dev/"
+        }
+      ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.opera-2.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.opera-2.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.opera-2.company"
+          },
+          "url": "https://opera.com/"
+        }
+      ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.sectra-2.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.sectra-2.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.sectra-2.company"
+          },
+          "url": "https://communications.sectra.com/"
+        }
+      ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.sectra-1.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.sectra-1.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.sectra-1.company"
+          },
+          "url": "https://communications.sectra.com/"
+        }
+      ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.opera-1.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.opera-1.origin"
+          }
+        },
+        {
+          "name": {
+            "i18nKey": "items.opera-1.company"
+          },
+          "url": "https://opera.com/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "./education.schema.json",
+  "items": [
+    {
+      "title": {
+        "i18nKey": "Bachelor of Science"
+      },
+      "educator": {
+        "name": {
+          "i18nKey": "Linköping University"
+        },
+        "url": "https://liu.se/"
+      },
+      "courses": [
+        {
+          "title": {
+            "i18nKey": "Information Technology"
+          },
+          "timeframes": [{ "from": "2016-09-01", "to": "2019-11-30" }],
+          "locations": [{ "city": "Linköping" }]
+        }
+      ]
+    },
+    {
+      "title": {
+        "i18nKey": "Leadership"
+      },
+      "educator": {
+        "name": {
+          "i18nKey": "Linköping University"
+        },
+        "url": "https://liu.se/"
+      },
+      "courses": [
+        {
+          "title": {
+            "i18nKey": "917G25"
+          },
+          "timeframes": [{ "i18nKey": "Autumn 2019" }],
+          "locations": [{ "city": "Linköping" }]
+        },
+        {
+          "title": {
+            "i18nKey": "754G49"
+          },
+          "timeframes": [{ "i18nKey": "Autumn 2017" }],
+          "locations": [{ "city": "Linköping" }]
+        }
+      ]
+    },
+    {
+      "title": {
+        "i18nKey": "Law"
+      },
+      "educator": {
+        "name": {
+          "i18nKey": "Linköping University"
+        },
+        "url": "https://liu.se/"
+      },
+      "courses": [
+        {
+          "title": {
+            "i18nKey": "747G06"
+          },
+          "timeframes": [{ "i18nKey": "Spring 2017" }],
+          "locations": [{ "city": "Linköping" }]
+        }
+      ]
+    }
+  ]
+}

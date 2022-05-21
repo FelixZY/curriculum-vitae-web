@@ -1,0 +1,111 @@
+{
+  "$schema": "./experience.schema.json",
+  "items": [
+    {
+      "title": {
+        "i18nKey": "Software Developer (Consultant)"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.attentec"
+        },
+        "url": "https://www.attentec.se/"
+      },
+      "description": {
+        "i18nKey": "description.attentec2021"
+      },
+      "timeframes": [{ "from": "2021-05-03" }],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Software Developer"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.opera-se"
+        },
+        "url": "https://www.opera.com/"
+      },
+      "description": {
+        "i18nKey": "description.opera2019"
+      },
+      "timeframes": [{ "from": "2019-11-04", "to": "2021-04-30" }],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "fof-title"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.fof"
+        },
+        "url": "https://fourofour.se/"
+      },
+      "description": {
+        "i18nKey": "description.fof2015"
+      },
+      "timeframes": [{ "from": "2015-04-09", "to": "2020-12-31" }],
+      "locations": [{ "city": "Falköping" }, { "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Summer Intern"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.sectra-comm"
+        },
+        "url": "https://communications.sectra.com/"
+      },
+      "timeframes": [{ "from": "2019-06-10", "to": "2019-08-09" }],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Summer Intern"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.hern-labs"
+        },
+        "url": "https://www.opera.com/"
+      },
+      "timeframes": [
+        { "from": "2017-06-07", "to": "2017-08-25" },
+        { "from": "2018-06-04", "to": "2018-08-31" }
+      ],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Lab Assistant"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.liu"
+        },
+        "url": "https://liu.se/"
+      },
+      "description": {
+        "i18nKey": "description.liu2018"
+      },
+      "timeframes": [{ "from": "2018-11-01", "to": "2018-12-31" }],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Student Consultant"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.unitalent"
+        },
+        "url": "https://unitalent.se/"
+      },
+      "timeframes": [{ "from": "2017-01-01", "to": "2018-06-30" }],
+      "locations": [{ "city": "Linköping" }]
+    }
+  ]
+}

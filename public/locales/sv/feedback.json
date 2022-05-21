@@ -1,0 +1,34 @@
+{
+  "items": {
+    "attentec-1": {
+      "quote": "En av de tio bästa utvecklarna jag arbetat med under mina 35 yrkesverksamma år.",
+      "origin": "Återkoppling från kund",
+      "company": "Attentec AB"
+    },
+    "alvin": {
+      "quote": "Prestigelös, driven, analytisk, initiativtagande och gillar att få jobba med olika grejer. [...] Prestigelös på så sätt att du tycker det är viktigare att hitta bästa lösningen än att det är just din lösning som 'vinner'.",
+      "origin": "Kollega",
+      "name": "Alvin Stockhaus"
+    },
+    "opera-2": {
+      "quote": "From our brief interaction I can tell that you're one of the most positive persons I've worked with. It was a pleasure!",
+      "origin": "Team Lead",
+      "company": "Opera Sweden AB"
+    },
+    "sectra-2": {
+      "quote": "Felix has shown great commitment to go forward, find and design solutions that improve the performance of the product.",
+      "origin": "Anställningsbetyg",
+      "company": "Sectra Communications AB"
+    },
+    "sectra-1": {
+      "quote": "He has proven that he can work both individually and with others, and has for example taken lead in daily team meetings.",
+      "origin": "Anställningsbetyg",
+      "company": "Sectra Communications AB"
+    },
+    "opera-1": {
+      "quote": "He is talented at turning ideas and requirements into well designed and working products.",
+      "origin": "Anställningsbetyg",
+      "company": "Opera Software AS/HERN Labs AB"
+    }
+  }
+}

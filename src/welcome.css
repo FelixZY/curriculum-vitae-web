@@ -1,0 +1,7 @@
+.welcome p {
+  @apply mt-2;
+}
+.welcome strong,
+.welcome b {
+  @apply font-medium;
+}

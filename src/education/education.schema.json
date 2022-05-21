@@ -1,0 +1,117 @@
+{
+  "$id": "education.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": ["items"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "description": "An array of individual pieces of education.",
+      "items": {
+        "type": "object",
+        "required": ["title", "educator", "courses"],
+        "properties": {
+          "title": {
+            "allOf": [
+              { "$ref": "#/$defs/localizedString" },
+              {
+                "description": "E.g job title. \"Software Developer\", etc."
+              }
+            ]
+          },
+          "educator": {
+            "type": "object",
+            "description": "The person or institution responsible for this education.",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/localizedString"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "$ref": "#/$defs/localizedString"
+                },
+                "timeframes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                },
+                "locations": {
+                  "type": "array",
+                  "description": "The location(s) where this experience was gained",
+                  "items": {
+                    "$ref": "#/$defs/location"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "required": ["i18nKey"],
+      "properties": {
+        "i18nKey": {
+          "type": "string",
+          "description": "Key for react-i18next useTranslation hook: https://react.i18next.com/latest/usetranslation-hook"
+        }
+      },
+      "additionalProperties": false
+    },
+    "timeframe": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "A single timeframe. Exclude \"to\" if this is a present experience.",
+          "required": ["from"],
+          "properties": {
+            "from": {
+              "type": "string",
+              "format": "date"
+            },
+            "to": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "$ref": "#/$defs/localizedString"
+        }
+      ]
+    },
+    "location": {
+      "type": "object",
+      "required": ["city"],
+      "properties": {
+        "city": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

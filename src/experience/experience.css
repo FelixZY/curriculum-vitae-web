@@ -1,0 +1,7 @@
+.experience ul {
+  @apply list-disc list-outside pl-[1em];
+}
+
+.experience ul li {
+  @apply mt-[.5em];
+}

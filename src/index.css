@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html * {
+    @apply border-light-outline dark:border-dark-outline dark:print:border-light-outline outline-light-outline dark:outline-dark-outline dark:print:outline-light-outline;
+  }
+
+  body {
+    @apply body-medium bg-light-background print:bg-transparent dark:bg-dark-background dark:print:bg-transparent text-light-on-background dark:text-dark-on-background dark:print:text-light-on-background border-light-outline dark:border-dark-outline dark:print:border-light-outline;
+  }
+
+  h1,
+  .display-large {
+    @apply font-brand font-normal text-[3.5625rem] leading-[4rem] tracking-normal text-primary;
+  }
+
+  h2,
+  .display-medium {
+    @apply font-brand font-normal text-[2.8125rem] leading-[3.25rem] tracking-normal text-primary mb-8 print:mb-4;
+  }
+
+  h3,
+  .display-small {
+    @apply font-brand font-normal text-[2.25rem] leading-[2.75rem] tracking-normal text-primary;
+  }
+
+  h4,
+  .headline-large {
+    @apply font-brand font-normal text-[2rem] leading-[2.5rem] tracking-normal text-primary;
+  }
+
+  h5,
+  .headline-medium {
+    @apply font-brand font-normal text-[1.75rem] leading-[2.25rem] tracking-normal text-primary;
+  }
+
+  h6,
+  .headline-small {
+    @apply font-brand font-normal text-[1.5rem] leading-[2rem] tracking-normal text-primary;
+  }
+
+  .title-large {
+    @apply font-brand font-normal text-[1.375rem] leading-[1.75rem] tracking-normal;
+  }
+
+  .title-medium {
+    @apply font-sans font-medium text-[1rem] leading-[1.5rem] tracking-wide;
+  }
+
+  .title-small {
+    @apply font-sans font-medium text-[.875rem] leading-[1.25rem] tracking-wide;
+  }
+
+  button,
+  .label-large {
+    @apply font-sans font-medium text-[.875rem] leading-[1.25rem] tracking-wide;
+  }
+
+  label,
+  .label-medium {
+    @apply font-sans font-medium text-[.75rem] leading-[1rem] tracking-wider;
+  }
+
+  .label-small {
+    @apply font-sans font-medium text-[.6875rem] leading-[.375rem] tracking-wider;
+  }
+
+  .body-large {
+    @apply font-sans font-normal text-[1rem] leading-[1.5rem] tracking-wider;
+  }
+
+  p,
+  .body-medium {
+    @apply font-sans font-normal text-[.875rem] leading-[1.25rem] tracking-wide;
+  }
+
+  .body-small {
+    @apply font-sans font-normal text-[.75rem] leading-[1rem] tracking-wider;
+  }
+
+  q {
+    @apply italic;
+  }
+
+  address {
+    @apply not-italic label-medium;
+  }
+
+  .text-primary {
+    @apply text-light-primary dark:text-dark-primary dark:print:text-light-primary;
+  }
+
+  @media print {
+    @page {
+      margin: 10mm 15mm 10mm 15mm;
+    }
+
+    html.dark {
+      color-scheme: light;
+    }
+  }
 }

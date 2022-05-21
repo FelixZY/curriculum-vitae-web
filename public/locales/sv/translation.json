@@ -1,0 +1,12 @@
+{
+  "dark mode: auto": "Växla mellan mörkt och ljust tema. Nuvarande: auto",
+  "dark mode: light": "Växla mellan mörkt och ljust tema. Nuvarande: ljust",
+  "dark mode: dark": "Växla mellan mörkt och ljust tema. Nuvarande: mörkt",
+  "present": "nuvarande",
+  "Autumn 2019": "höst 2019",
+  "Autumn 2017": "höst 2017",
+  "Spring 2017": "vår 2017",
+  "footer_1": "Denna webbsida är skriven i <0>Typescript</0> och använder sig av ramverken <1>React</1> och <2>tailwindcss</2>.",
+  "footer_2": "Sidans design är baserad på <0>Material Design (v3)</0> med tech-ikoner från <1>Devicon</1>.",
+  "footer_3": "Du vet väl att du kan <0>skriva ut den här sidan</0>?"
+}

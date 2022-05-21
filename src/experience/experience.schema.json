@@ -1,0 +1,134 @@
+{
+  "$id": "experience.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": ["items"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "description": "An array of individual pieces of experience.",
+      "items": {
+        "type": "object",
+        "required": ["title", "company", "timeframes", "locations"],
+        "properties": {
+          "title": {
+            "allOf": [
+              { "$ref": "#/$defs/localizedString" },
+              {
+                "description": "E.g job title. \"Software Developer\", etc."
+              }
+            ]
+          },
+          "company": {
+            "type": "object",
+            "description": "The company at which this experience was gained.",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/localizedString"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": {
+            "allOf": [
+              { "$ref": "#/$defs/localizedString" },
+              {
+                "description": "A description of this experience. The description should be markdown formatted."
+              }
+            ]
+          },
+          "timeframes": {
+            "type": "array",
+            "description": "A list of timeframes where this experience was being gained.",
+            "items": {
+              "type": "object",
+              "description": "A single timeframe. Exclude \"to\" if this is a present experience.",
+              "required": ["from"],
+              "properties": {
+                "from": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "to": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "locations": {
+            "type": "array",
+            "description": "The location(s) where this experience was gained",
+            "items": {
+              "type": "object",
+              "required": ["city"],
+              "properties": {
+                "city": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "required": ["i18nKey"],
+      "properties": {
+        "i18nKey": {
+          "type": "string",
+          "description": "Key for react-i18next useTranslation hook: https://react.i18next.com/latest/usetranslation-hook"
+        }
+      },
+      "additionalProperties": false
+    },
+    "timeframe": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "A single timeframe. Exclude \"to\" if this is a present experience.",
+          "required": ["from"],
+          "properties": {
+            "from": {
+              "type": "string",
+              "format": "date"
+            },
+            "to": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "$ref": "#/$defs/localizedString"
+        }
+      ]
+    },
+    "location": {
+      "type": "object",
+      "required": ["city"],
+      "properties": {
+        "city": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
