@@ -11,7 +11,7 @@ function WelcomeSection({ ...attrs }: HTMLAttributes<HTMLElement>) {
     <BaseSection
       title={t("Hi!")}
       isArticle
-      className={`welcome break-inside-avoid ${attrs.className ?? ""}`}
+      className={`welcome ${attrs.className ?? ""}`}
       {...attrs}
     >
       {/*
