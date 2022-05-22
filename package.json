@@ -31,7 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --max-warnings 1 --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore .",
     "deploy": "npm run build && node deploy.js",
     "eject": "react-scripts eject",
     "postbuild": "react-snap",
