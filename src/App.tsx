@@ -79,12 +79,17 @@ function App() {
                 )}
               </div>
             </div>
-            {navigator.userAgent !== "ReactSnap" && (
+            {navigator.userAgent !== "ReactSnap" ? (
               <address>
                 <a href={`mailto:${deObfuscate(obfuscatedEmail)}`}>
                   {deObfuscate(obfuscatedEmail)}
                 </a>
               </address>
+            ) : (
+              <span>
+                {/* Span with only &nbsp; to reduce layout jump when rendering mailto link */}
+                &nbsp;
+              </span>
             )}
           </div>
         </div>
