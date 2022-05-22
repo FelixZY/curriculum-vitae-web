@@ -1,4 +1,4 @@
-import { act, renderHook } from "@testing-library/react";
+import { act, fireEvent, renderHook } from "@testing-library/react";
 import { DataStore, useDataStore } from "../storage/DataStore";
 
 type TestData = {
@@ -45,27 +45,29 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-function createDataStore(version: number = 1): DataStore<TestData> {
-  return new (class extends DataStore<TestData> {
-    constructor() {
-      super(version, DATASTORE_NAME, DEFAULT_DATA);
-    }
-    protected migrate(_: number, data: any): TestData {
-      data.wasMigrated = true;
-      this.write(data);
-      return data;
-    }
-  })();
+class TestDataDataStore extends DataStore<TestData> {
+  constructor(version: number = 1) {
+    super(version, DATASTORE_NAME, DEFAULT_DATA);
+  }
+  protected migrate(_: number, data: any): TestData {
+    data.wasMigrated = true;
+    this.write(data);
+    return data;
+  }
+
+  public createStorageContainerForTesting(data: TestData) {
+    return this.createStorageContainer(data);
+  }
 }
 
 test("Simple read returns default data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
 
   expect(dataStore.read()).toMatchObject<TestData>(DEFAULT_DATA);
 });
 
 test("Hook initial data is default data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
   const hook = new TestDataHookWrapper(
     dataStore,
     renderHook(() => useDataStore(dataStore))["result"]
@@ -75,7 +77,7 @@ test("Hook initial data is default data", async () => {
 });
 
 test("Hook can be used to read and write", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
   const hook = new TestDataHookWrapper(
     dataStore,
     renderHook(() => useDataStore(dataStore))["result"]
@@ -115,20 +117,65 @@ test("Hook can be used to read and write", async () => {
   expect(hook.data).toMatchObject<TestData>(expected);
 });
 
+test("Hook responds to storage event", async () => {
+  const dataStore = new TestDataDataStore();
+  const hook = new TestDataHookWrapper(
+    dataStore,
+    renderHook(() => useDataStore(dataStore))["result"]
+  );
+  const oldData = DEFAULT_DATA;
+  const newData = {
+    ...DEFAULT_DATA,
+    str: "modified",
+  };
+
+  expect(hook.data).toMatchObject<TestData>(oldData);
+
+  // Overwrite localstorage without notifying data store.
+  // Imitates what would happen if storage was changed in another tab.
+  localStorage.setItem(
+    "test",
+    JSON.stringify(dataStore.createStorageContainerForTesting(newData))
+  );
+  // hook.data should not yet have been modified
+  // as no storage event has been triggered.
+  expect(hook.data).toMatchObject<TestData>(oldData);
+
+  // eslint-disable-next-line testing-library/no-unnecessary-act
+  await act(async () => {
+    const writePromise = dataStore.writePromise;
+    fireEvent(
+      window,
+      new StorageEvent("storage", {
+        key: DATASTORE_NAME,
+        oldValue: JSON.stringify(
+          dataStore.createStorageContainerForTesting(oldData)
+        ),
+        newValue: JSON.stringify(
+          dataStore.createStorageContainerForTesting(newData)
+        ),
+      })
+    );
+    await writePromise;
+  });
+
+  expect(hook.data).toMatchObject<TestData>(newData);
+});
+
 test("Read throws on bad data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
   localStorage.setItem(DATASTORE_NAME, "garbage_data");
   expect(() => dataStore.read(false)).toThrowError();
 });
 
 test("Read can be reset on bad data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
   localStorage.setItem(DATASTORE_NAME, "garbage_data");
   expect(dataStore.read()).toMatchObject<TestData>(DEFAULT_DATA);
 });
 
 test("Mutate updates data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
 
   const expected = {
     ...DEFAULT_DATA,
@@ -141,7 +188,7 @@ test("Mutate updates data", async () => {
 });
 
 test("Write updates data", async () => {
-  const dataStore = createDataStore();
+  const dataStore = new TestDataDataStore();
 
   const expected = {
     ...DEFAULT_DATA,
@@ -152,8 +199,8 @@ test("Write updates data", async () => {
 });
 
 test("State is synced between multiple data store instances", async () => {
-  const dataStore1 = createDataStore();
-  const dataStore2 = createDataStore();
+  const dataStore1 = new TestDataDataStore();
+  const dataStore2 = new TestDataDataStore();
 
   dataStore1.mutate((data) => {
     data.str = "modified";
@@ -163,8 +210,8 @@ test("State is synced between multiple data store instances", async () => {
 });
 
 test("DataStore migration", async () => {
-  const dataStore1 = createDataStore(1);
-  const dataStore2 = createDataStore(2);
+  const dataStore1 = new TestDataDataStore(1);
+  const dataStore2 = new TestDataDataStore(2);
 
   // Ensure data is written to storage
   dataStore1.mutate((data) => data);

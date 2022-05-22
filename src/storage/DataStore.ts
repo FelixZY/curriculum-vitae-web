@@ -53,6 +53,12 @@ export abstract class DataStore<T> {
     this._writePromise = new Promise((resolve) => {
       this.writePromiseResolve = resolve;
     });
+
+    // Respond to storage changes in other tabs
+    window.addEventListener("storage", (e) => {
+      if (e.key !== name) return;
+      this.onStoreMutated(this.read());
+    });
   }
 
   public mutate(callback: (data: T) => void) {
@@ -66,6 +72,10 @@ export abstract class DataStore<T> {
       this.name,
       JSON.stringify(this.createStorageContainer(data))
     );
+    this.onStoreMutated(data);
+  }
+
+  private onStoreMutated(data: T) {
     const resolve = this.writePromiseResolve;
     this._writePromise = new Promise((resolve) => {
       this.writePromiseResolve = resolve;
@@ -110,7 +120,7 @@ export abstract class DataStore<T> {
 
   protected abstract migrate(fromVersion: number, data: any): T;
 
-  private createStorageContainer(data: T): DataStoreContainer<T> {
+  protected createStorageContainer(data: T): DataStoreContainer<T> {
     return {
       version: this.version,
       name: this.name,
