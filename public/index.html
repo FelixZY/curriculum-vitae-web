@@ -82,6 +82,33 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Noto+Sans:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        var fallback = {
+          data: { darkmode: "auto" },
+        };
+        var darkmode = "auto";
+        try {
+          var siteSettings = JSON.parse(
+            localStorage.getItem("site_settings") || JSON.stringify(fallback)
+          );
+          try {
+            darkmode = siteSettings.data.darkmode;
+          } catch (_) {
+            darkmode = fallback.data.darkmode;
+          }
+        } catch (e) {
+          console.error(e);
+        }
+        if (
+          darkmode === "dark" ||
+          (darkmode === "auto" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>
