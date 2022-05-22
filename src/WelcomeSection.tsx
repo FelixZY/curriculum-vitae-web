@@ -9,10 +9,10 @@ function WelcomeSection({ ...attrs }: HTMLAttributes<HTMLElement>) {
   const { t } = useTranslation("welcome");
   return (
     <BaseSection
+      {...attrs}
       title={t("Hi!")}
       isArticle
       className={`welcome ${attrs.className ?? ""}`}
-      {...attrs}
     >
       {/*
        * Include classnames used in markdown to avoid loosing them during tree-shaking.
