@@ -8,5 +8,6 @@
   "Spring 2017": "Spring 2017",
   "footer_1": "This website is written in <0>Typescript</0> and uses the <1>React</1> and <2>tailwindcss</2> frameworks.",
   "footer_2": "The design is based on <0>Material Design (v3)</0> with tech icons from <1>Devicon</1>.",
-  "footer_3": "Have you tried <0>printing this page</0>?"
+  "footer_3": "The source code is available on <0>GitHub</0> and the site itself is hosted via <1>GitHub Pages</1>",
+  "footer_4": "Have you tried <0>printing this page</0>?"
 }

@@ -151,6 +151,25 @@ function App() {
             <Trans
               i18nKey="footer_3"
               components={[
+                <a
+                  className="underline"
+                  href="https://github.com/FelixZY/curriculum-vitae-web"
+                >
+                  GitHub
+                </a>,
+                <a
+                  className="underline"
+                  href="https://pages.github.com/"
+                >
+                  GitHub Pages
+                </a>,
+              ]}
+            />
+          </p>
+          <p className="py-2">
+            <Trans
+              i18nKey="footer_4"
+              components={[
                 <button
                   className="underline font-normal"
                   onClick={(e) => {
