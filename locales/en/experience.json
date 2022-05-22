@@ -1,0 +1,24 @@
+{
+  "Experience": "Experience",
+  "Software Developer (Consultant)": "Software Developer (Consultant)",
+  "Software Developer": "Software Developer",
+  "Summer Intern": "Summer Intern",
+  "fof-title": "Entrepreneur/\u200BIT Consultant",
+  "Lab Assistant": "Lab Assistant",
+  "Student Consultant": "Student Consultant",
+  "description": {
+    "attentec2021": "",
+    "opera2019": "",
+    "liu2018": "Introductory course in **Android** development using **Java** and **Kotlin**.",
+    "fof2015": "**Web development** in own business."
+  },
+  "company": {
+    "attentec": "Attentec AB",
+    "opera-se": "Opera Sweden AB",
+    "fof": "Four o Four",
+    "sectra-comm": "Sectra Communications AB",
+    "hern-labs": "Opera Software AS/\u200BHERN Labs AB",
+    "liu": "Linköping University",
+    "unitalent": "Unitalent AB"
+  }
+}

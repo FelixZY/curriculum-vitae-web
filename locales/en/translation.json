@@ -1,0 +1,12 @@
+{
+  "dark mode: auto": "Toggle dark mode. Value: auto",
+  "dark mode: light": "Toggle dark mode. Value: light",
+  "dark mode: dark": "Toggle dark mode. Value: dark",
+  "present": "present",
+  "Autumn 2019": "Autumn 2019",
+  "Autumn 2017": "Autumn 2017",
+  "Spring 2017": "Spring 2017",
+  "footer_1": "This website is written in <0>Typescript</0> and uses the <1>React</1> and <2>tailwindcss</2> frameworks.",
+  "footer_2": "The design is based on <0>Material Design (v3)</0> with tech icons from <1>Devicon</1>.",
+  "footer_3": "Have you tried <0>printing this page</0>?"
+}
