@@ -1,5 +1,5 @@
 .experience ul {
-  @apply list-disc list-outside pl-[1em];
+  @apply list-disc list-outside pl-[1.25em];
 }
 
 .experience ul li {

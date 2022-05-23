@@ -32,7 +32,7 @@ function Education({
       ) : (
         <h4 className="-mt-2 inline-block">{educator.name}</h4>
       )}
-      <ul className="list-disc list-outside pl-[1em]">
+      <ul className="list-disc list-outside pl-[1.25em]">
         {courses.map((course, i) => (
           <li
             key={i}
