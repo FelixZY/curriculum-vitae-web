@@ -8,7 +8,7 @@ This repository contains the source code for my web-based resume available at [h
 
 This site uses GitHub pages for deployment. The release version of this site is available on the `gh-pages` branch.
 
-A new deployment can be created using the `npm deploy` command.
+A new deployment can be created using the `npm run deploy` command.
 
 ## License
 
