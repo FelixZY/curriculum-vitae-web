@@ -216,9 +216,9 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="medium"
-          href="https://www.mysql.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-          value="MySQL"
+          href="https://www.postgresql.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          value="SQL"
         />
         <TechImage
           size="medium"
