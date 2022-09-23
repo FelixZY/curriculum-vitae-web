@@ -216,12 +216,6 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="medium"
-          href="https://www.postgresql.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-          value="SQL"
-        />
-        <TechImage
-          size="medium"
           href="https://nodejs.org/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
           value="NodeJS"
@@ -256,6 +250,12 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           href="https://sass-lang.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
           value="Sass"
+        />
+        <TechImage
+          size="medium"
+          href="https://www.postgresql.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          value="SQL"
         />
         <TechImage
           size="medium"
