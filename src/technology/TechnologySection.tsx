@@ -160,6 +160,12 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="medium"
+          href="https://dart.dev/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+          value="Dart"
+        />
+        <TechImage
+          size="medium"
           href="https://www.docker.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
           value="Docker"
@@ -169,6 +175,12 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           href="https://www.figma.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
           value="Figma"
+        />
+        <TechImage
+          size="medium"
+          href="https://flutter.dev/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+          value="Flutter"
         />
         <TechImage
           size="medium"
