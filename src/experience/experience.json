@@ -7,14 +7,30 @@
       },
       "company": {
         "name": {
-          "i18nKey": "company.attentec"
+          "i18nKey": "company.aspire"
         },
-        "url": "https://www.attentec.se/"
+        "url": "https://aspire.se/"
       },
       "description": {
         "i18nKey": "description.attentec2021"
       },
       "timeframes": [{ "from": "2021-05-03" }],
+      "locations": [{ "city": "Linköping" }]
+    },
+    {
+      "title": {
+        "i18nKey": "Maintainer"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.dansdata"
+        },
+        "url": "https://dansdata.se/"
+      },
+      "description": {
+        "i18nKey": "description.dansdata2020"
+      },
+      "timeframes": [{ "from": "2020-01-01" }],
       "locations": [{ "city": "Linköping" }]
     },
     {
