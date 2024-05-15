@@ -205,7 +205,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           className="dark:bg-white dark:print:bg-none dark:rounded-md dark:print:rounded-none dark:p-1 dark:print:p-0"
           size="medium"
           href="https://gradle.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
           value="Gradle"
         />
         <TechImage
@@ -251,10 +251,10 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           value="React"
         />
         <TechImage
-          className="dark:bg-white dark:print:bg-none dark:rounded-full dark:print:rounded-none"
+          className="dark:p-1 dark:bg-white dark:print:bg-none dark:rounded-full dark:print:rounded-none"
           size="medium"
           href="https://www.rust-lang.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
           value="Rust"
         />
         <TechImage
@@ -272,7 +272,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         <TechImage
           size="medium"
           href="https://tailwindcss.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
           value={"tailwind\u00ADcss"}
         />
         <TechImage
