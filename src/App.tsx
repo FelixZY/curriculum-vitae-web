@@ -43,7 +43,7 @@ function App() {
           <div className="relative flex gap-4 justify-start items-center">
             <img
               className="border-2 rounded-full h-24 w-24"
-              src={process.env.PUBLIC_URL + "/fzy.webp"}
+              src={process.env.PUBLIC_URL + "/fzy.webp?v=20240515204230"}
               alt="Felix Zedén Yverås"
             />
             <h1 className="text-[6rem] text-light-on-background dark:text-dark-on-background dark:print:text-light-on-background">
