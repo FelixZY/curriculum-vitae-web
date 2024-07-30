@@ -109,9 +109,9 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
       <div className="relative block mt-8 z-10">
         <TechImage
           size="large"
-          href="https://www.java.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-          value="Java"
+          href="https://www.android.com/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+          value="Android"
         />
         <TechImage
           size="large"
@@ -121,9 +121,9 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="large"
-          href="https://www.python.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-          value="Python"
+          href="https://www.postgresql.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+          value="SQL"
         />
         <TechImage
           size="large"
@@ -136,15 +136,15 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
       <div className="relative block print:block mt-8">
         <TechImage
           size="medium"
-          href="https://www.android.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
-          value="Android"
+          href="https://azure.microsoft.com/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+          value="Azure"
         />
         <TechImage
           size="medium"
-          href="https://getbootstrap.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-          value={"Boot\u00ADstrap"}
+          href="https://bun.sh/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg"
+          value="Bun"
         />
         <TechImage
           size="medium"
@@ -175,6 +175,12 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           href="https://www.figma.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
           value="Figma"
+        />
+        <TechImage
+          size="medium"
+          href="https://firebase.google.com/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+          value="Firebase"
         />
         <TechImage
           size="medium"
@@ -210,9 +216,21 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="medium"
+          href="https://graphql.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg"
+          value="GraphQL"
+        />
+        <TechImage
+          size="medium"
           href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
           value="HTML"
+        />
+        <TechImage
+          size="medium"
+          href="https://www.java.com/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+          value="Java"
         />
         <TechImage
           size="medium"
@@ -221,10 +239,23 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           value={"Java\u00ADscript"}
         />
         <TechImage
+          className="dark:p-1 dark:bg-white dark:print:bg-none dark:rounded-full dark:print:rounded-none"
+          size="medium"
+          href="https://www.latex-project.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg"
+          value="LaTeX"
+        />
+        <TechImage
           size="medium"
           href="https://en.wikipedia.org/wiki/Linux"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
           value="Linux"
+        />
+        <TechImage
+          size="medium"
+          href="https://nextjs.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+          value="NextJS"
         />
         <TechImage
           size="medium"
@@ -235,7 +266,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         <TechImage
           size="medium"
           href="https://www.openapis.org/"
-          src={process.env.PUBLIC_URL + "/openapi-original.svg"}
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg"
           value={"Open\u00ADAPI"}
         />
         <TechImage
@@ -243,6 +274,12 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           href="https://www.php.net/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
           value="PHP"
+        />
+        <TechImage
+          size="medium"
+          href="https://www.python.org/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+          value="Python"
         />
         <TechImage
           size="medium"
@@ -265,15 +302,16 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
         />
         <TechImage
           size="medium"
-          href="https://www.postgresql.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-          value="SQL"
-        />
-        <TechImage
-          size="medium"
           href="https://tailwindcss.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
           value={"tailwind\u00ADcss"}
+        />
+        <TechImage
+          className="dark:invert"
+          size="medium"
+          href="https://vercel.com/"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+          value={"Vercel"}
         />
         <TechImage
           size="medium"
