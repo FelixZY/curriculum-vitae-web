@@ -129,7 +129,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           size="large"
           href="https://www.typescriptlang.org/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-          value="Typescript"
+          value={"Type\u00ADscript"}
         />
       </div>
       <hr className="border-dashed border-t-2 my-8" />
