@@ -10,7 +10,7 @@ function BaseSection({
 >) {
   const content = (
     <>
-      <h2 className="border-b-4 border-light-primary dark:border-dark-primary dark:print:border-light-primary">
+      <h2 className="break-after-avoid border-b-4 border-light-primary dark:border-dark-primary dark:print:border-light-primary">
         {title}
       </h2>
       {children}
@@ -20,7 +20,7 @@ function BaseSection({
     <>
       <section
         {...attrs}
-        className={`relative my-4 first:mt-0 last:mb-0 break-inside-avoid ${
+        className={`relative my-4 first:mt-0 last:mb-0 ${
           attrs.className ?? ""
         }`}
       >

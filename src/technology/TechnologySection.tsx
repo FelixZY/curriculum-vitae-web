@@ -132,7 +132,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           value={"Type\u00ADscript"}
         />
       </div>
-      <hr className="border-dashed border-t-2 my-8" />
+      <hr className="border-dashed border-t-2 my-8 break-before-avoid break-after-avoid" />
       <div className="relative block print:block mt-8">
         <TechImage
           size="medium"
