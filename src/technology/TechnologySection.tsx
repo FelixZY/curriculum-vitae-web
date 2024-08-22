@@ -307,7 +307,7 @@ function TechnologySection({ ...attrs }: HTMLAttributes<HTMLElement>) {
           value={"tailwind\u00ADcss"}
         />
         <TechImage
-          className="dark:invert"
+          className="dark:invert dark:print:filter-none"
           size="medium"
           href="https://vercel.com/"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
