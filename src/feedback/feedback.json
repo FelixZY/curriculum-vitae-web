@@ -108,6 +108,18 @@
           "url": "https://opera.com/"
         }
       ]
+    },
+    {
+      "quote": {
+        "i18nKey": "items.anon-1.quote"
+      },
+      "authors": [
+        {
+          "name": {
+            "i18nKey": "items.anon-1.origin"
+          }
+        }
+      ]
     }
   ]
 }
