@@ -1,7 +1,7 @@
 import { GB as FlagGB, SE as FlagSE } from "country-flag-icons/react/3x2";
 import i18next from "i18next";
-import React, { useLayoutEffect } from "react";
-import { Trans } from "react-i18next";
+import { useLayoutEffect } from "react";
+import { Trans, useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import DarkModeToggle from "./components/DarkModeToggle";
 import EducationSection from "./education/EducationSection";
@@ -11,12 +11,16 @@ import { useLocalizedMetaTags } from "./seo/seo";
 import TechnologySection from "./technology/TechnologySection";
 import { useLanguage } from "./util/hooks";
 import WelcomeSection from "./WelcomeSection";
+import FindMeSection from "./find-me/FindMeSection";
+import classNames from "classnames";
 
 function deObfuscate(value: string) {
   return decodeURIComponent(atob(value)).split("").reverse().join("");
 }
 
 function App() {
+  const { t } = useTranslation("technology");
+
   // This will cause our static html to be generated with
   // meta information in the correct language during the
   // postbuild step with react-snap.
@@ -96,8 +100,28 @@ function App() {
       </header>
       <main className="container min-h-full mb-16 print:mx-0 print:px-0 print:w-full print:max-w-none">
         <WelcomeSection />
-        <ExperienceSection className="lg:inline-block lg:align-top lg:w-1/2 lg:pr-8 print:sm:inline-block print:sm:align-top print:sm:w-1/2 print:sm:pr-8" />
-        <EducationSection className="lg:inline-block lg:align-top lg:w-1/2 lg:pl-8 print:sm:inline-block print:sm:align-top print:sm:w-1/2 print:sm:pl-8" />
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-8 mt-4">
+          <ExperienceSection className="my-0" />
+          <div className="flex flex-col">
+            <FindMeSection className="print:hidden" />
+            <EducationSection className="my-0" />
+            <img
+              src={process.env.PUBLIC_URL + "/codingame.webp"}
+              alt={t("codingame-alt")}
+              className={classNames([
+                "mx-auto",
+                "w-full",
+                "max-w-sm",
+                "dark:invert",
+                "dark:print:filter-none",
+                "border-2",
+                "rounded-lg",
+                "shadow-md",
+                "print:shadow-none",
+              ])}
+            />
+          </div>
+        </div>
         <TechnologySection />
         <FeedbackSection />
       </main>
