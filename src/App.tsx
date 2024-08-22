@@ -40,7 +40,7 @@ function App() {
     <>
       <header className="container my-8 print:mt-0 print:mx-0 print:px-0 print:w-full print:max-w-none">
         <div className="flex flex-wrap-reverse justify-between items-stretch">
-          <div className="relative flex gap-4 justify-start items-center">
+          <div className="relative flex flex-wrap gap-4 justify-center items-center">
             <img
               className="border-2 rounded-full h-24 w-24"
               src={process.env.PUBLIC_URL + "/fzy.webp?v=20240515204230"}
