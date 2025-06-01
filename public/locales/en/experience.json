@@ -8,6 +8,7 @@
   "Lab Assistant": "Lab Assistant",
   "Student Consultant": "Student Consultant",
   "description": {
+    "segov2025": "",
     "attentec2021": "* Planning and implementation of multi-system architecture.\n* Project management, including being a driving force for improved issue tracking and communications.\n* Setup, configuration and administration of **Azure** resources for multi-service system.\n* Full stack **web development** using **React** and **ASP.NET** (**C#**).\n* Pre-production and maintenance of white-label application for **Android** (**Kotlin**) and **iOS** (**Swift**).\n* Maintenance of **Xamarin** (**C#**/**.NET**) based **Android**/**iOS** application.\n* Setup of new **Kotlin** based **Android TV** project integrating with previous **Java** codebase.\n* Development of internal tools using **Python**, **Google Apps Script** and **Javascript**/**Typescript**.\n* Mockup design using **Figma**.",
     "dansdata2020": "* Solo development of open source information platform for social dancing in Sweden.\n* Integration and deployment with **Supabase** and **Vercel**.\n* **Flutter** development for web.\n* **API design** and implementation in a **Next.js** based backend.\n* Database planning and implementation using **PostgreSQL** and **Prisma**.\n* UI and UX design\n* Mockup design using **Figma**.",
     "opera2019": "* Leading role in extensive **multi-server** system upgrade with major responsibility for **Python** 2 to 3 software upgrade. (~9 months)\n* **Android** development using **Kotlin** in an international agile team. (~6 months)\n* **Android** development using **Java**. (~3 months)\n* **Golang** development. (~1 month)\n* Documentation of API services in **OpenAPI** format.",
@@ -22,6 +23,7 @@
     "opera-se": "Opera Sweden AB",
     "fof": "Four o Four",
     "sectra-comm": "Sectra Communications AB",
+    "swedish-government-agency": "Swedish Government Agency",
     "hern-labs": "Opera Software AS/\u200BHERN Labs AB",
     "liu": "Linköping University",
     "unitalent": "Unitalent AB"

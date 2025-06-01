@@ -3,6 +3,21 @@
   "items": [
     {
       "title": {
+        "i18nKey": "Software Developer"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.swedish-government-agency"
+        }
+      },
+      "description": {
+        "i18nKey": "description.segov2025"
+      },
+      "timeframes": [{ "from": "2025-05-05" }],
+      "locations": [{ "city": "Stockholm" }]
+    },
+    {
+      "title": {
         "i18nKey": "Software Developer (Consultant)"
       },
       "company": {
