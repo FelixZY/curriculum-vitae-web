@@ -207,7 +207,7 @@ function App() {
               ]}
             />
           </p>
-          <p className="py-2">&copy; 2024 Felix Zedén Yverås</p>
+          <p className="py-2">&copy; 2025 Felix Zedén Yverås</p>
         </div>
       </footer>
     </>
