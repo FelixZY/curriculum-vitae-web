@@ -19,7 +19,7 @@ function Experience({
   title: string;
   company: {
     name: string;
-    url: string;
+    url?: string;
   };
   description?: string;
   timeframes: Timeframe[];
