@@ -8,6 +8,7 @@
   "Lab Assistant": "Labb\u00ADassistent",
   "Student Consultant": "Student\u00ADkonsult",
   "description": {
+    "segov2025": "",
     "attentec2021": "* Planering och implementation av arkitektur för ett multi\u00ADplattforms\u00ADsystem.\n* Projekledning, inklusive att vara en ledande kraft för förbättrad dokumentation och kommunikation.\n* Uppsättning, konfiguration och administration av **Azure**-resurser.\n* **Webbutveckling** (fullstack) i **React** och **ASP.NET** (**C#**).\n* Förarbete för och underhåll av white-label-app för **Android** (**Kotlin**) och **iOS** (**Swift**)\n* Underhåll av **Xamarin**-baserad (**C#**/**.NET**) **Android**/**iOS** applikation.\n* Grundarbete för och utveckling av ny **Kotlin**-baserad **Android TV**-applikation, inklusive integration med tidigare kodbas i **Java**.\n* Utveckling av interna verktyg med **Python**, **Google Apps Script** och **Javascript**/**Typescript**.\n* Design av mockups i **Figma**.",
     "dansdata2020": "* Eget open source-projekt för utveckling av en öppen informations\u00ADkälla för socialdans i Sverige.\n* Integration med och deployment till **Supabase** och **Vercel**.\n* **Flutter**-utveckling för webben.\n* **API design** och implementation i en **Next.js**-baserad backend.\n* Databaseplanering och implementation med hjälp av **PostgreSQL** och **Prisma**.\n* UI och UX-design\n* Design av mockups i **Figma**.",
     "opera2019": "* Ledande utvecklarroll i uppgradering från **Python** 2 till 3 av ett **fler\u00ADserver\u00ADsystem**. (~9 månader)\n* **Android**\u00ADutveckling (**Kotlin**) i ett internationellt agilt team. (~6 månader)\n* **Android**\u00ADutveckling (**Java**). (~3 månader)\n* Utveckling i **Go**. (~1 månad)\n* Dokumentation av API-tjänster i **OpenAPI**-format.",
@@ -17,11 +18,12 @@
     "fof2015": "**Webbutvecklare** i eget företag."
   },
   "company": {
-    "aspire": "Aspire AB (f.d. Attentec AB)",
+    "attentec": "Ninetech AB (f.d. Aspire AB/Attentec AB)",
     "dansdata": "Dansdata",
     "opera-se": "Opera Sweden AB",
     "fof": "Four o Four",
     "sectra-comm": "Sectra Communications AB",
+    "swedish-government-agency": "Myndighet",
     "hern-labs": "Opera Software AS/\u200BHERN Labs AB",
     "liu": "Linköpings universitet",
     "unitalent": "Unitalent AB"
