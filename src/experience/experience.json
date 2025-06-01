@@ -3,18 +3,33 @@
   "items": [
     {
       "title": {
+        "i18nKey": "Software Developer"
+      },
+      "company": {
+        "name": {
+          "i18nKey": "company.swedish-government-agency"
+        }
+      },
+      "description": {
+        "i18nKey": "description.segov2025"
+      },
+      "timeframes": [{ "from": "2025-05-05" }],
+      "locations": [{ "city": "Stockholm" }]
+    },
+    {
+      "title": {
         "i18nKey": "Software Developer (Consultant)"
       },
       "company": {
         "name": {
-          "i18nKey": "company.aspire"
+          "i18nKey": "company.attentec"
         },
-        "url": "https://aspire.se/"
+        "url": "https://ninetech.se/"
       },
       "description": {
         "i18nKey": "description.attentec2021"
       },
-      "timeframes": [{ "from": "2021-05-03" }],
+      "timeframes": [{ "from": "2021-05-03", "to": "2025-04-30" }],
       "locations": [{ "city": "Linköping" }]
     },
     {
